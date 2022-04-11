@@ -6,7 +6,7 @@
     android:background="#050303"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
@@ -42,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/img1"
                         android:layout_width="42dp"
                         android:layout_height="46dp"
