@@ -1,18 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#050303"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/dehaze"
+        android:outlineSpotShadowColor="@color/white"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="HOME"
+        android:id="@+id/home"
+        android:textSize="25dp"
+        android:letterSpacing="0.29"
+        android:layout_marginTop="30dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/home"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/f1"
+                android:background="#6A6363">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="42dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#FFFBFB"
+                        android:src="@drawable/ic_launcher_foreground" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VINCENT NDOLWA"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:id="@+id/text1"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/img1"
+                        android:layout_marginTop="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KAKAMEGA CITY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_toRightOf="@id/img1"
+                        android:textStyle="bold"
+                        android:layout_below="@id/text1"
+                        android:layout_marginTop="2dp"/>
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img1"
+                        android:layout_marginLeft="20dp"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:text="Account Balance"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KSH. 20000"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:layout_toRightOf="@id/text2"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:layout_below="@id/img1"
+                        android:id="@+id/text3"
+                        android:layout_marginLeft="20dp"/>
+
+                    <Button
+                        android:id="@+id/b1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text2"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:backgroundTint="@color/teal_200"
+                        android:text="Make  a Payment"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text3"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_toRightOf="@id/b1"
+                        android:backgroundTint="@color/teal_700"
+                        android:text="Autopay"
+                        android:textColor="@color/white" />
+
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/f2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/f1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#0C0B0B">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rent Updates"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/f3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/f2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#0C0B0B">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comment"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/f4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/f2"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/f2"
+                android:background="#0C0B0B">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Landlord"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/f5"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/f2"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="-159dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/f2"
+                android:background="#0C0B0B">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="News"
+                    android:layout_margin="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+
+            </FrameLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
